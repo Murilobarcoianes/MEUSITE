@@ -48,6 +48,24 @@
         </tr>
     </table>
 
-    <button class="entrada">Click me!</button>
+    <button class="entrada" id="myButton">ME CLICA!</button>
 </body>
 </html>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const btn = document.getElementById('myButton');
+
+    btn.addEventListener('click', function() {
+      btn.textContent = 'Clicado!';
+      btn.classList.add('pressed');
+      btn.disabled = true;
+    }, { once: true });
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    alert('não confie no site, ele não tem nada!');
+  });
+</script>
