@@ -49,6 +49,8 @@
     </table>
 
     <button class="entrada" id="myButton">ME CLICA!</button>
+
+    <button class="hidden-button" id="hiddenButton">SEGREDO</button>
 </body>
 </html>
 
@@ -57,7 +59,7 @@
     const btn = document.getElementById('myButton');
 
     btn.addEventListener('click', function() {
-      btn.textContent = 'Clicado!';
+      btn.textContent = 'Valeu!';
       btn.classList.add('pressed');
       btn.disabled = true;
     }, { once: true });
@@ -67,5 +69,10 @@
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     alert('não confie no site, ele não tem nada!');
+
+    const hiddenBtn = document.getElementById('hiddenButton');
+    hiddenBtn.addEventListener('click', function() {
+      window.location.href = 'pagina.html';
+    });
   });
 </script>
